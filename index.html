@@ -1,27 +1,157 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>Keegan Ravindran - Cybersecurity Research</title>
-	</head>
-	<body>
-		<h1>Keegan Ravindran</h1>
-		<h2>Cybersecurity Research</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cybersecurity research portfolio featuring work on fuzz testing, open-source software security, Agentic AI, and LLM-assisted harness generation." />
+  <title>Keegan Ravindran | Cybersecurity Research</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">KR</a>
+      <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-		<h3>Agentic AI and LLMs in Fuzz Testing and Harness Development</h3>
-		<p>
-			Research into the use of Agentic AI and Large Language Models to
-			automate fuzz harness generation for complex network software.
-		</p>
-		<a href="agentic-ai-fuzzing-frrouting.pdf">View Research Paper</a>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Cybersecurity Research Portfolio</p>
+          <h1>Keegan Ravindran</h1>
+          <p class="hero-copy">
+            Research focused on software security, fuzz testing, open-source security evaluation,
+            and the use of Agentic AI and Large Language Models to improve vulnerability discovery.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#research">View Research</a>
+            <a class="button secondary" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </div>
+          <p class="hero-note">Singapore Management University · Computer Science · Cybersecurity</p>
+        </div>
+        <aside class="hero-card" aria-label="Research areas">
+          <p class="card-kicker">Research Areas</p>
+          <ul class="tag-list">
+            <li>Fuzz Testing</li>
+            <li>Open-Source Security</li>
+            <li>Agentic AI</li>
+            <li>Large Language Models</li>
+            <li>Software Security</li>
+            <li>Network Protocol Security</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-		<hr />
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Research Projects</h2>
+          <p>Full papers are available directly below.</p>
+        </div>
 
-		<h3>Securing Open-Source Software via Fuzz Testing</h3>
-		<p>
-			Security evaluation of open-source software pre-installed on Ubuntu
-			using OpenSSF Scorecard and AFL++ fuzz testing.
-		</p>
-		<a href="securing-oss-via-fuzz-testing.pdf">View Research Paper</a>
-	</body>
+        <article class="research-card">
+          <div class="research-topline">
+            <span class="number">01</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Agentic AI and LLMs in Fuzz Testing and Harness Development</h3>
+          <p class="summary">
+            Investigated whether Agentic AI can automate fuzz-harness development for FRRouting (FRR),
+            a complex suite of stateful network daemons. The project adapted Light-Fuzz-Gen using an
+            embedded fuzzing strategy that preserves daemon initialization state and internal dependencies.
+          </p>
+          <div class="metrics" aria-label="Key findings">
+            <div><strong>7.61%</strong><span>Total FRR line coverage</span></div>
+            <div><strong>4</strong><span>Core daemons evaluated</span></div>
+            <div><strong>&gt; OSS-Fuzz</strong><span>Exceeded 7.04% reported runtime coverage</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li>Built an agentic workflow for source-code context mining, structured YAML extraction, daemon detection, and hybrid template generation.</li>
+            <li>Evaluated generated harnesses across BGP, PIM, OSPF, and Zebra under matched five-hour fuzzing conditions.</li>
+            <li>Improved overall line coverage beyond the manual baseline while reaching previously untested packet-processing logic.</li>
+          </ul>
+          <div class="card-actions">
+            <a class="button primary" href="agentic-ai-fuzzing-frrouting.pdf" target="_blank" rel="noopener noreferrer">View Paper</a>
+            <a class="text-link" href="agentic-ai-fuzzing-frrouting.pdf" download>Download PDF</a>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-topline">
+            <span class="number">02</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Securing Open-Source Software via Fuzz Testing</h3>
+          <p class="summary">
+            Evaluated the security posture of open-source software pre-installed on Ubuntu 24.04 LTS,
+            using OpenSSF Scorecard to identify under-tested projects before applying targeted AFL++ fuzzing.
+          </p>
+          <div class="metrics" aria-label="Key findings">
+            <div><strong>154</strong><span>OSS repositories assessed</span></div>
+            <div><strong>57.8%</strong><span>Had no documented fuzzing coverage</span></div>
+            <div><strong>36.99%</strong><span>KWAJ parser coverage</span></div>
+          </div>
+          <ul class="bullet-list">
+            <li>Constructed and analyzed a security dataset of GitHub-hosted Ubuntu packages using OpenSSF Scorecard.</li>
+            <li>Proposed refinements to security metrics by incorporating testing effectiveness, maintainer activity, and code coverage.</li>
+            <li>Developed AFL++ harnesses with AddressSanitizer and identified three crashes and two hangs in libmspack's KWAJ parser.</li>
+          </ul>
+          <div class="card-actions">
+            <a class="button primary" href="securing-open-source-software-fuzz-testing.pdf" target="_blank" rel="noopener noreferrer">View Paper</a>
+            <a class="text-link" href="securing-open-source-software-fuzz-testing.pdf" download>Download PDF</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section muted">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Research interests</h2>
+        </div>
+        <div class="prose">
+          <p>
+            My work focuses on practical software-security research, particularly techniques that make
+            vulnerability discovery more scalable. I am interested in fuzzing, automated security testing,
+            open-source software assurance, network security, and AI-assisted security engineering.
+          </p>
+          <p>
+            This page serves as a concise portfolio for recruiters, researchers, and collaborators who want
+            to review the underlying papers and technical results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Interested in the work?</h2>
+          <p>Connect with me through GitHub or LinkedIn, or refer to the contact details listed on my resume.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button secondary" href="#top">Back to Top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© 2026 Keegan Ravindran</span>
+      <span>Cybersecurity Research Portfolio</span>
+    </div>
+  </footer>
+</body>
 </html>
